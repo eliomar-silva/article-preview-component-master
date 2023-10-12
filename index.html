@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Article preview component</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="center">
+    <section class="container">
+      <img class="drawers" src="./images/drawers.jpg" alt="">
+      <div class="contaneir-description">
+        <h1>
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+        </h1>
+        <p class="description">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
+        <div class="container-info-creato">
+          <div class="container-creator">
+            <span class="flex">
+              <img class="avatar" src="./images/avatar-michelle.jpg" alt="">
+              <div class="name-creator">
+                <h3>Michelle Appleton</h3>
+                <p>28 Jun 2020</p>
+              </div>
+            </span>
+            <div class="container-share"><img src="./images/icon-share.svg" alt=""></div>
+          </div>
+          <div class="container-social-media">
+            <span class="flex">
+              <span class="text-share">SHARE</span>
+              <div class="social-media-bottom">
+                <a href="#"><img src="./images/icon-facebook.svg" alt=""></a>
+                <a href="#"><img src="./images/icon-twitter.svg" alt=""></a>
+                <a href="#"><img src="./images/icon-pinterest.svg" alt=""></a>
+              </div>
+            </span>
+            <div class="container-share"><img src="./images/icon-share.svg" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const btnShare = document.querySelectorAll('.container-share');
+    
+    function handleToggleBtn() {
+      const containerCreate = document.querySelector('.container-info-creato');
+      containerCreate.classList.toggle("active");    
+    }
+
+    btnShare.forEach(btn => btn.addEventListener('click', handleToggleBtn))
+  </script>
+</body>
+
+</html>
